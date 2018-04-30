@@ -1,0 +1,28 @@
+img {
+  width: 60% ;
+  height: 50%;
+ }
+ body{
+   background-color:#D3d3d3;
+   padding: 0%;
+   margin: 0%; 
+ }
+
+.info,.doors{
+  width: 80%
+}
+p{
+  margin: 0.6px;
+}
+li{
+  margin: 5px;
+}
+.conteudo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+#view{
+  width: 70%;
+  height: auto;
+}

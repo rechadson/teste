@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block css %}
+<link rel="stylesheet" href="{%static 'style.css'%}">
+
+{% endblock  %}
+
+{% block conteudo %}           
+    <div class="conteudo">                   
+            <div class="card col-7">
+                <img id="view"> 
+            </div>
+            <div class="card col-5">
+                <div class="card-body"> 
+                    <h5 class="card-title">{{productDetails.name}}</h5>
+                    <h1 class=""preço> teste</h1><br/>
+                    <p><span>ganhe</span> 
+                        <strong>{{productDetails.superpoints}} pontos !
+                        </strong>
+                    </p>
+                    
+                    <form name="opção">
+                        <strong>Cor</strong>
+                        <input name="cor" type="radio" value="Amarelo" checked>Amarelo
+                        <input name="cor" type="radio" value="Preto">Preto<br/>
+                        <strong>Tamanho</strong>
+                        <input name="tamanho" type="radio">Pequeno
+                        <input name="tamanho" type="radio" value="M�dio" checked>M�dio
+                        <input name="tamanho" type="radio" value="Grande">Grande
+                    </form>
+                    
+
+                    
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="card col-5">
+                    {{productDetails.code|safe}}
+                    {{productDetails.brand|safe}}
+                    {{productDetails.video|safe}}
+                </div>
+            </div>
+            <div class="card col-12">
+                    {{productDetails.description|safe}}
+            </div>
+
+            <div class="card col-12">
+                    {{productDetails.features|safe}}
+            </div>
+            
+
+    </div>
+
+
+
+
+  
+
+    
+
+{% endblock %}
+{% block script%}
+{% endblock %}
